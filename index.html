@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet de Voyage - L'Ouest Américain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFBF5; /* Un fond "sable" très léger */
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .nav-button {
+            transition: all 0.3s ease;
+        }
+        .nav-button.active {
+            background-color: #0d9488; /* teal-600 */
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .content-phase {
+            transition: opacity 0.5s ease-in-out;
+        }
+        /* Mettre les noms de sites en gras avec une légère couleur pour les faire ressortir */
+        .site-name {
+            font-weight: 600; /* Plus marqué que 'normal' */
+            color: #047871; /* Un teal un peu plus foncé */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+
+        <!-- En-tête --><header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-bold text-teal-800 mb-4">L'Ouest Américain</h1>
+            <h2 class="text-2xl md:text-3xl text-gray-600">De la Cité du Cœur aux Géants de Roche</h2>
+            <p class="mt-4 text-lg text-gray-500">Un carnet de voyage interactif</p>
+        </header>
+
+        <!-- Introduction --><div class="bg-white p-6 rounded-lg shadow-lg mb-12 border border-teal-100">
+            <p class="text-lg text-gray-700">
+                Bienvenue dans ce carnet de bord numérique retraçant notre road trip épique sur la Côte Ouest des États-Unis l'été dernier. Naviguez à travers les quatre grandes phases de notre aventure, des lumières de Californie aux déserts brûlants, des canyons majestueux au retour sur la côte Pacifique. Chaque carte ci-dessous représente une étape de notre magnifique périple de 20 jours dans l'ouest américain.
+            </p>
+        </div>
+
+        <!-- Navigation des Phases --><nav id="main-nav" class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+            <button data-target="phase-1" class="nav-button active text-sm md:text-base font-semibold py-3 px-4 md:px-6 bg-white text-teal-700 rounded-full shadow-md hover:shadow-lg hover:bg-teal-50">
+                Phase 1: Californie 🌉
+            </button>
+            <button data-target="phase-2" class="nav-button text-sm md:text-base font-semibold py-3 px-4 md:px-6 bg-white text-teal-700 rounded-full shadow-md hover:shadow-lg hover:bg-teal-50">
+                Phase 2: Parcs & Désert 🏜️
+            </button>
+            <button data-target="phase-3" class="nav-button text-sm md:text-base font-semibold py-3 px-4 md:px-6 bg-white text-teal-700 rounded-full shadow-md hover:shadow-lg hover:bg-teal-50">
+                Phase 3: Les Canyons 🏞️
+            </button>
+            <button data-target="phase-4" class="nav-button text-sm md:text-base font-semibold py-3 px-4 md:px-6 bg-white text-teal-700 rounded-full shadow-md hover:shadow-lg hover:bg-teal-50">
+                Phase 4: Retour Pacifique 🌊
+            </button>
+        </nav>
+
+        <!-- Contenu Principal --><main>
+
+            <!-- Phase 1: De l'Europe aux Lumières Californiennes --><section id="phase-1" class="content-phase">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/0d9488/FFFBF5?text=Bruxelles+%26+Washington" alt="Voyage vers SF" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 1 : L'Envol et la Porte d'Entrée</h3>
+                            <p class="text-gray-700">Le périple commence à <strong class="site-name">Bruxelles</strong> ! Un vol transatlantique, souvent avec une escale salvatrice à <strong class="site-name">Washington</strong>, nous prépare à l'excitation de la Californie. L'arrivée à <strong class="site-name">San Francisco</strong> marque le début de l'aventure.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="images/SanFrancisco.jpeg" alt="San Francisco Golden Gate Bridge" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jours 2-3 : San Francisco, la Vibrante</h3>
+                            <p class="text-gray-700">Ville bohème et emblématique. On se perd avec délice entre les maisons victoriennes de <strong class="site-name">Alamo Square</strong>, on affronte le vent sur le <strong class="site-name">Golden Gate Bridge</strong> et on déambule sur <strong class="site-name">Fisherman's Wharf</strong>. Une ville qui a le charme d'une petite Europe avec l'énergie de l'Amérique.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Phase 2: Les Géants Verts et les Déserts Brûlants --><section id="phase-2" class="content-phase hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/0d9488/FFFBF5?text=Yosemite+NP" alt="Yosemite" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 4 : L'Immensité de Yosemite</h3>
+                            <p class="text-gray-700">Une cathédrale de granit. La vallée, sculptée par les glaciers, nous offre des vues à couper le souffle sur <strong class="site-name">El Capitan</strong> et le <strong class="site-name">Half Dome</strong>. Les randonnées sont rafraîchissantes et la présence des séquoias géants est un véritable cadeau.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="Image 6.jpeg" alt="Sequoia National Park" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 5 : Sequoia Park, Face aux Démons Verts</h3>
+                            <p class="text-gray-700">On continue avec les colosses de la nature. Le <strong class="site-name">Sequoia National Park</strong> abrite le <strong class="site-name">Général Sherman</strong>, l'arbre le plus volumineux du monde. Devant ces titans, on se sent incroyablement petit.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/0d9488/FFFBF5?text=Death+Valley" alt="Death Valley" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 6 : Death Valley, le Chaudron Aride</h3>
+                            <p class="text-gray-700">Contraste saisissant ! Le silence est assourdissant, la chaleur intense, mais les paysages sont d'une beauté désertique hypnotique : les dunes de <strong class="site-name">Mesquite Flat</strong> et les étendues salées de <strong class="site-name">Badwater Basin</strong>.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="Image 2.jpeg" alt="Las Vegas" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 7 : Las Vegas, L'Oasis de Lumière</h3>
+                            <p class="text-gray-700">Après la chaleur du désert, l'éblouissement. <strong class="site-name">Las Vegas</strong>, ville du jeu et du spectacle, nous submerge de néons et de démesure. Une promenade sur le <strong class="site-name">Strip</strong> pour admirer les hôtels thématiques... C'est l'étape de la folie et du luxe.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Phase 3: Les Canyons, Chefs-d'œuvre de l'Utah et de l'Arizona --><section id="phase-3" class="content-phase hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="Image 9.jpeg" alt="Zion National Park" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jours 8-9 : Zion, l'Aventure Verticale</h3>
+                            <p class="text-gray-700">Des falaises ocres qui s'élèvent vers le ciel. <strong class="site-name">Angels Landing</strong>, une randonnée mythique pour les plus courageux. <strong class="site-name">The Narrows</strong>, marcher dans l'eau de la <strong class="site-name">rivière Virgin</strong>, encadré par des parois de canyon spectaculaires.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="Image 10.jpeg" alt="Bryce Canyon" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 10 : La Féerie de Bryce Canyon</h3>
+                            <p class="text-gray-700">L'architecture géologique est lunaire. Des milliers de cheminées de fée (*hoodoos*) colorées se dressent dans un amphithéâtre naturel. La lumière du lever ou du coucher du soleil y est magique.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="Image 4.jpeg" alt="Horseshoe Bend" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 11 : Le Ruban et les Lumières de Page</h3>
+                            <p class="text-gray-700">Une journée riche : <strong class="site-name">Horseshoe Bend</strong>, la boucle parfaite du <strong class="site-name">Colorado</strong>. <strong class="site-name">Powell Lake</strong>, un contraste bleu apaisant. <strong class="site-name">Antelope Canyon</strong>, des failles sinueuses aux couleurs surréalistes. *Astuce : réservez à l'avance !*</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="Image 1.jpeg" alt="Monument Valley" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 12 : Monument Valley, La Toile du Western</h3>
+                            <p class="text-gray-700">L'arrivée en terre <strong class="site-name">Navajo</strong> est un moment fort. Les buttes rouges emblématiques semblent tout droit sorties d'un film. La boucle en voiture offre des perspectives grandioses. Le coucher du soleil sur ces géants est inoubliable.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/0d9488/FFFBF5?text=Grand+Canyon" alt="Grand Canyon" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 13 : Le Grand Canyon, la Mesure du Monde</h3>
+                            <p class="text-gray-700">Le <strong class="site-name">Grand Canyon</strong>, c'est la démesure. Un spectacle qui dépasse l'entendement. On se tient au bord du vide, observant les couches de roche racontant des millions d'années d'histoire géologique. <strong class="site-name">South Rim</strong> est idéal.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Phase 4: Retour vers la Californie et le Pacifique --><section id="phase-4" class="content-phase hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="Image 3.jpeg" alt="Route 66" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 14 : La Mythique Route 66 et Joshua Tree</h3>
+                            <p class="text-gray-700">Quitter les canyons par la <strong class="site-name">Route 66</strong> est un passage obligé. Arrêts dans de petites villes figées dans le temps (comme le <strong class="site-name">Roy's Cafe</strong>). On poursuit vers <strong class="site-name">Joshua Tree National Park</strong>, où les arbres aux formes étranges peuplent un paysage désertique unique.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="Image 8.jpeg" alt="Los Angeles Hollywood Sign" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jours 15-16 : Los Angeles et l'Esprit du Sud</h3>
+                            <p class="text-gray-700"><strong class="site-name">Los Angeles</strong>, la Cité des Anges, immense et diverse. <strong class="site-name">Venice Beach</strong> offre une ambiance bohème et décalée, parfaite pour s'imprégner de l'esprit californien. Entre <strong class="site-name">Hollywood</strong> et les plages, <strong class="site-name">L.A.</strong> est une ville de contrastes.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/0d9488/FFFBF5?text=C%C3%B4te+Pacifique" alt="Côte Pacifique" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 17 : La Côte Pacifique, Glamour et Charme Danois</h3>
+                            <p class="text-gray-700">On remonte la côte par la <strong class="site-name">Highway 1</strong>. <strong class="site-name">Santa Barbara</strong>, élégante aux accents espagnols. <strong class="site-name">Solvang</strong>, une surprise étonnante : un village danois complet au milieu de la <strong class="site-name">Californie</strong> !</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/0d9488/FFFBF5?text=Mountain+View" alt="Mountain View" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 18 : Mountain View, Technologie et Retour</h3>
+                            <p class="text-gray-700">Dernière étape avant le retour. <strong class="site-name">Mountain View</strong>, au cœur de la <strong class="site-name">Silicon Valley</strong>, est le centre mondial de la technologie. Une visite rapide des campus pour prendre la mesure de l'innovation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
+                        <img src="https://placehold.co/600x400/0d9488/FFFBF5?text=Retour+Bruxelles" alt="Retour Bruxelles" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 19 : Le Grand Retour</h3>
+                            <p class="text-gray-700">Départ de l'aéroport de <strong class="site-name">San Francisco</strong> (<strong class="site-name">SFO</strong>) pour le vol de retour vers <strong class="site-name">Bruxelles</strong>. La tête pleine de souvenirs de canyons ocres, de lumières de <strong class="site-name">Vegas</strong>, de séquoias géants et de la liberté des *open roads* américaines.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Conclusion --><footer class="mt-16 pt-12 border-t border-teal-200">
+            <h3 class="text-center text-4xl font-bold text-teal-800 mb-6">Une Aventure Grandiose</h3>
+            <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto">
+                Ce road trip est une symphonie de paysages. Des villes vibrantes aux silences assourdissants du désert, des forêts denses aux falaises vertigineuses, c'est l'incarnation de l'aventure et du contraste. Chaque étape est une nouvelle découverte, un émerveillement constant.
+            </p>
+            <p class="text-center text-sm text-gray-500 mt-8">
+                Carnet de Voyage Interactif créé avec Tailwind CSS et Vanilla JS.
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('#main-nav .nav-button');
+            const contentPhases = document.querySelectorAll('main .content-phase');
+
+            function showPhase(targetId) {
+                // Gérer l'affichage du contenu
+                contentPhases.forEach(phase => {
+                    if (phase.id === targetId) {
+                        phase.classList.remove('hidden');
+                        phase.style.opacity = '0';
+                        setTimeout(() => { phase.style.opacity = '1'; }, 50);
+                    } else {
+                        phase.classList.add('hidden');
+                        phase.style.opacity = '0';
+                    }
+                });
+
+                // Gérer l'état actif des boutons
+                navButtons.forEach(button => {
+                    if (button.getAttribute('data-target') === targetId) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            }
+
+            // Ajouter les écouteurs d'événements
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+                    showPhase(targetId);
+                });
+            });
+
+            // Afficher la première phase par défaut
+            showPhase('phase-1');
+        });
+    </script>
+
+</body>
+</html>
