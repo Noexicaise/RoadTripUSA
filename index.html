@@ -25,6 +25,14 @@
             color: white;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
+        /* DÉBUT DE LA MODIFICATION POUR AMÉLIORER LA LISIBILITÉ AU SURVOL */
+        .nav-button.active:hover {
+            background-color: #0f766e; /* teal-700: Un peu plus foncé que teal-600 pour un léger effet de pression, mais reste sombre */
+            color: white;
+            /* Garder une ombre similaire pour l'effet */
+            box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 3px 5px -1p rgba(0, 0, 0, 0.08);
+        }
+        /* FIN DE LA MODIFICATION */
         .content-phase {
             transition: opacity 0.5s ease-in-out;
         }
