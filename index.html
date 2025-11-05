@@ -25,7 +25,7 @@
             color: white;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-        /* DÉBUT DE LA MODIFICATION POUR AMÉLIORER LA LISIBILITÉ AU SURVOL */
+        /* MODIFICATION POUR AMÉLIORER LA LISIBILITÉ AU SURVOL */
         .nav-button.active:hover {
             background-color: #0f766e; /* teal-700: Un peu plus foncé que teal-600 pour un léger effet de pression, mais reste sombre */
             color: white;
@@ -47,22 +47,20 @@
 
     <div class="container mx-auto px-4 py-8 max-w-7xl">
 
-        <!-- En-tête --><header class="text-center mb-12">
+        <header class="text-center mb-12">
             <h1 class="text-5xl md:text-7xl font-bold text-teal-800 mb-4">L'Ouest Américain</h1>
-            <h2 class="text-2xl md:text-3xl text-gray-600">Entre déserts,
-canyons et océan Pacifique</h2>
-            <p class="mt-4 text-lg text-gray-500">« Les plus beaux voyages sont ceux qu’on n’a pas encore
-faits. »
+            <h2 class="text-2xl md:text-3xl text-gray-600">Entre déserts, canyons et océan Pacifique</h2>
+            <p class="mt-4 text-lg text-gray-500">« Les plus beaux voyages sont ceux qu’on n’a pas encore faits. »
 Loïck Peyron</p>
         </header>
 
-        <!-- Introduction --><div class="bg-white p-6 rounded-lg shadow-lg mb-12 border border-teal-100">
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-12 border border-teal-100">
             <p class="text-lg text-gray-700">
                 Bienvenue dans ce carnet de bord numérique retraçant notre road trip sur la Côte Ouest des États-Unis l'été dernier. Notre voyage se découpe en quatre grandes phases, des lumières de Californie aux déserts brûlants, des canyons majestueux au retour sur la côte Pacifique. Chaque carte ci-dessous représente une étape de notre magnifique périple de 22 jours dans l'ouest américain.
             </p>
         </div>
 
-        <!-- Navigation des Phases --><nav id="main-nav" class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+        <nav id="main-nav" class="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
             <button data-target="phase-1" class="nav-button active text-sm md:text-base font-semibold py-3 px-4 md:px-6 bg-white text-teal-700 rounded-full shadow-md hover:shadow-lg hover:bg-teal-50">
                 Phase 1: Californie 🌉
             </button>
@@ -77,13 +75,20 @@ Loïck Peyron</p>
             </button>
         </nav>
 
-        <!-- Contenu Principal --><main>
+        <main>
 
-            <!-- Phase 1: De l'Europe aux Lumières Californiennes --><section id="phase-1" class="content-phase">
+            <section id="phase-1" class="content-phase">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Washington.jpeg" alt="Voyage vers SF" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/JOUR01/Washington01.jpg", "Photos/JOUR01/Washington02.jpg", "Photos/JOUR01/Washington03.jpg", "Photos/JOUR01/Washington04.jpg", "Photos/JOUR01/Washington05.jpg"]'
+                             data-current-index="0">
+                            <img src="Photos/JOUR01/Washington03.jpg" alt="Voyage vers SF" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 1 : L'Envol et l'entrée aux USA</h3>
                             <p class="text-gray-700">Le périple commence à <strong class="site-name">Bruxelles</strong> ! Un vol transatlantique depuis Bruxelles avec une escale salvatrice à <strong class="site-name">Washington</strong>, nous prépare à l'excitation de la Californie. L'arrivée à <strong class="site-name">San Francisco</strong> marque le début de l'aventure.</p>
@@ -91,7 +96,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/SanFrancisco.jpeg" alt="San Francisco Golden Gate Bridge" class="w-full h-56 object-cover">
+                         <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/JOUR02/SF.jpg","Photos/JOUR02/SF01.jpg", "Photos/JOUR02/SF02.jpg","Photos/JOUR02/SF03.jpg","Photos/JOUR02/SF04.jpg","Photos/JOUR02/SF05.jpg","Photos/JOUR02/SF06.jpg","Photos/JOUR02/SF07.jpg","Photos/JOUR02/SF08.jpg","Photos/JOUR02/SF09.jpg","Photos/JOUR02/SF10.jpg","Photos/JOUR02/SF11.jpg","Photos/JOUR02/SF12.jpg"]'
+                             data-current-index="0">
+                            <img src="Photos/JOUR02/SF.jpg" alt="San Francisco Golden Gate Bridge" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jours 2-3 : San Francisco, The City by the Bay</h3>
                             <p class="text-gray-700">Ville bohème et emblématique. On se perd avec délice entre les maisons victoriennes de <strong class="site-name">Alamo Square</strong>, on affronte le vent sur le <strong class="site-name">Golden Gate Bridge</strong> et on déambule sur <strong class="site-name">Fisherman's Wharf</strong>. Une ville qui a le charme d'une petite Europe avec l'énergie de l'Amérique.</p>
@@ -101,11 +113,18 @@ Loïck Peyron</p>
                 </div>
             </section>
 
-            <!-- Phase 2: Les Géants Verts et les Déserts Brûlants --><section id="phase-2" class="content-phase hidden">
+            <section id="phase-2" class="content-phase hidden">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Yosemite2.jpg" alt="Yosemite" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"                						
+							data-images='["Photos/JOUR03/YOSEMITE01.jpg","Photos/JOUR03/YOSEMITE02.jpg","Photos/JOUR03/YOSEMITE03.jpg","Photos/JOUR03/YOSEMITE04.jpg","Photos/JOUR03/YOSEMITE05.jpg","Photos/JOUR03/YOSEMITE06.jpg","Photos/JOUR03/YOSEMITE07.jpg","Photos/JOUR03/YOSEMITE08.jpg","Photos/JOUR03/YOSEMITE09.jpg","Photos/JOUR03/YOSEMITE10.jpg","Photos/JOUR03/YOSEMITE11.jpg"]'
+                            data-current-index="0">
+                            <img src="Photos/JOUR03/YOSEMITE02.jpg"," alt="Yosemite" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 4-5 : L'Immensité de Yosemite</h3>
                             <p class="text-gray-700">Une cathédrale de granit. La vallée, sculptée par les glaciers, nous offre des vues à couper le souffle sur <strong class="site-name">El Capitan</strong> et le <strong class="site-name">Half Dome</strong>. Les randonnées sont rafraîchissantes et la présence des séquoias géants est un véritable cadeau.</p>
@@ -113,7 +132,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Sequoia.jpeg" alt="Sequoia National Park" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/JOUR06/SEQUOIA01.jpg","Photos/JOUR06/SEQUOIA02.jpg","Photos/JOUR06/SEQUOIA03.jpg","Photos/JOUR06/SEQUOIA04.jpg","Photos/JOUR06/SEQUOIA05.jpg","Photos/JOUR06/SEQUOIA06.jpg","Photos/JOUR06/SEQUOIA07.jpg","Photos/JOUR06/SEQUOIA08.jpg","Photos/JOUR06/SEQUOIA09.jpg","Photos/JOUR06/SEQUOIA10.jpg","Photos/JOUR06/SEQUOIA11.jpg","Photos/JOUR06/SEQUOIA12.jpg","Photos/JOUR06/SEQUOIA13.jpg","Photos/JOUR06/SEQUOIA14.jpg","Photos/JOUR06/SEQUOIA15.jpg",]'
+                             data-current-index="0">
+                            <img src="Photos/JOUR06/SEQUOIA01.jpg" alt="Sequoia National Park" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 6 : Sequoia Park, Là où la nature touche le ciel</h3>
                             <p class="text-gray-700">On continue avec les colosses de bois. Le <strong class="site-name">Sequoia National Park</strong> abrite le <strong class="site-name">Général Sherman</strong>, l'arbre le plus volumineux du monde. Devant ces titans, on se sent incroyablement petit.</p>
@@ -121,7 +147,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Death.jpeg" alt="Death Valley" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/Death.jpeg", "Photos/BadwaterBasin.jpeg", "Photos/MesquiteFlat.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/Death.jpeg" alt="Death Valley" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 7 : Death Valley, le Chaudron Aride</h3>
                             <p class="text-gray-700">Contraste saisissant ! Le silence est assourdissant, la chaleur intense (le mercure s'envole à 48°), mais les paysages sont d'une beauté désertique hypnotique...On retient: les dunes de <strong class="site-name">Mesquite Flat</strong> et les étendues salées de <strong class="site-name">Badwater Basin</strong>.</p>
@@ -129,7 +162,14 @@ Loïck Peyron</p>
                     </div>
                     
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/LasVegas.jpeg" alt="Las Vegas" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/LasVegas.jpeg", "Photos/LV_Strip.jpeg", "Photos/LV_Neon.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/LasVegas.jpeg" alt="Las Vegas" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 8-9 : Las Vegas...Un Oasis de Lumière</h3>
                             <p class="text-gray-700">Après la chaleur du désert, l'éblouissement. <strong class="site-name">Las Vegas</strong>, ville du jeu et du spectacle, nous submerge de néons et de démesure. Une promenade sur le <strong class="site-name">Strip</strong> pour admirer les hôtels thématiques... C'est l'étape de la folie et du luxe.</p>
@@ -139,11 +179,18 @@ Loïck Peyron</p>
                 </div>
             </section>
 
-            <!-- Phase 3: Les Canyons, Chefs-d'œuvre de l'Utah et de l'Arizona --><section id="phase-3" class="content-phase hidden">
+            <section id="phase-3" class="content-phase hidden">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Zion.jpeg" alt="Zion National Park" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/Zion.jpeg", "Photos/AngelsLanding.jpeg", "Photos/TheNarrows.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/Zion.jpeg" alt="Zion National Park" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jours 10-11 : Zion, l'Aventure Verticale</h3>
                             <p class="text-gray-700">Des falaises ocres qui s'élèvent vers le ciel. Un des climax de notre Road Trip restera <strong class="site-name">Angels Landing</strong>, une randonnée mythique qui se termine par une section avec chaines. <strong class="site-name">The Narrows</strong>, nous permet de marcher dans l'eau de la <strong class="site-name">rivière Virgin</strong>, encadré par des parois de canyon spectaculaires.</p>
@@ -151,7 +198,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Bryce2.jpeg" alt="Bryce Canyon" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/Bryce2.jpeg", "Photos/BryceHoodoos.jpeg", "Photos/NavajoLoop.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/Bryce2.jpeg" alt="Bryce Canyon" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 12 : La Féerie de Bryce Canyon</h3>
                             <p class="text-gray-700">L'architecture géologique est lunaire. Des milliers de cheminées de fée (les Hoodoos) colorées se dressent dans un amphithéâtre naturel. La lumière du lever ou du coucher du soleil y est magique.</p>
@@ -159,7 +213,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Antilope.jpeg" alt="Horseshoe Bend" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/Antilope.jpeg", "Photos/HorseshoeBend.jpeg", "Photos/AntelopeLight.jpeg", "Photos/PowellLake.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/Antilope.jpeg" alt="Horseshoe Bend" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 13 : Le Ruban et les Lumières d'Antelope Canyon</h3>
                             <p class="text-gray-700">Une journée riche : <strong class="site-name">Horseshoe Bend</strong>, la boucle parfaite du <strong class="site-name">Colorado</strong>. <strong class="site-name">Powell Lake</strong>, un contraste bleu apaisant. <strong class="site-name">Antelope Canyon</strong>, des failles sinueuses aux couleurs surréalistes. Attention : la réservation est indispensable !</p>
@@ -167,7 +228,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Monument.jpeg" alt="Monument Valley" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/Monument.jpeg", "Photos/MV_Buttes.jpeg", "Photos/ForrestGumpPoint.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/Monument.jpeg" alt="Monument Valley" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 14 : Monument Valley, Sur les traces de John Ford</h3>
                             <p class="text-gray-700">L'arrivée en terre <strong class="site-name">Navajo</strong> est un moment fort. Les buttes rouges emblématiques semblent tout droit sorties d'un film. La boucle en voiture est possible et offre des perspectives grandioses. Le coucher du soleil sur ces géants est inoubliable.</p>
@@ -175,7 +243,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/GrandCanyon.jpeg" alt="Grand Canyon" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/GrandCanyon.jpeg", "Photos/GC_SouthRim.jpeg", "Photos/GC_Sunrise.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/GrandCanyon.jpeg" alt="Grand Canyon" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 15-16 : Le Grand Canyon, Au bord du Monde</h3>
                             <p class="text-gray-700">Le <strong class="site-name">Grand Canyon</strong>, c'est la démesure. Un spectacle qui dépasse l'entendement. On se tient au bord du vide, observant les couches de roche racontant des millions d'années d'histoire géologique. Côté trail, <strong class="site-name">South Rim</strong> est idéal.</p>
@@ -185,11 +260,18 @@ Loïck Peyron</p>
                 </div>
             </section>
 
-            <!-- Phase 4: Retour vers la Californie et le Pacifique --><section id="phase-4" class="content-phase hidden">
+            <section id="phase-4" class="content-phase hidden">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Route66.jpeg" alt="Route 66" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/Route66.jpeg", "Photos/JoshuaTree.jpeg", "Photos/RoysCafe.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/Route66.jpeg" alt="Route 66" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 17 : La Mythique Route 66 et Joshua Tree</h3>
                             <p class="text-gray-700">Quitter les canyons par la <strong class="site-name">Route 66</strong> est un passage obligé. Arrêts dans de petites villes figées dans le temps (comme le <strong class="site-name">Roy's Cafe</strong>). On poursuit vers <strong class="site-name">Joshua Tree National Park</strong>, où les arbres aux formes étranges peuplent un paysage désertique unique.</p>
@@ -197,7 +279,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/LA.jpeg" alt="Los Angeles Hollywood Sign" class="w-full h-56 object-cover">
+                         <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/LA.jpeg", "Photos/VeniceBeach.jpeg", "Photos/HollywoodSign.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/LA.jpeg" alt="Los Angeles Hollywood Sign" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jours 18-19 : Los Angeles, Là où les Rêves prennent vie</h3>
                             <p class="text-gray-700"><strong class="site-name">Los Angeles</strong>, la Cité des Anges, immense et diverse. <strong class="site-name">Venice Beach</strong> offre une ambiance bohème et décalée, parfaite pour s'imprégner de l'esprit californien. Entre <strong class="site-name">Hollywood</strong> et les plages, <strong class="site-name">L.A.</strong> est une ville de contrastes.</p>
@@ -205,7 +294,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/Solvang.jpeg" alt="Côte Pacifique" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/Solvang.jpeg", "Photos/SantaBarbara.jpeg", "Photos/Highway1.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/Solvang.jpeg" alt="Côte Pacifique" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 20 : La Côte Pacifique, Glamour et Charme Danois</h3>
                             <p class="text-gray-700">On remonte la côte par la <strong class="site-name">Highway 1</strong>. <strong class="site-name">Santa Barbara</strong>, élégante aux accents espagnols. <strong class="site-name">Solvang</strong>, une surprise étonnante : un village danois complet au milieu de la <strong class="site-name">Californie</strong> !</p>
@@ -213,7 +309,14 @@ Loïck Peyron</p>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/MoutainView.jpeg" alt="Mountain View" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/MoutainView.jpeg", "Photos/SiliconValley.jpeg", "Photos/GoogleCampus.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/MoutainView.jpeg" alt="Mountain View" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 21 : Mountain View, Sur la Route du Futur</h3>
                             <p class="text-gray-700">Dernière étape avant le retour. <strong class="site-name">Mountain View</strong>, au cœur de la <strong class="site-name">Silicon Valley</strong>, est le centre mondial de la technologie. Une visite rapide du campus de Google pour prendre la mesure de l'innovation.</p>
@@ -221,7 +324,14 @@ Loïck Peyron</p>
                     </div>
                     
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02]">
-                        <img src="Photos/SFAirport.jpeg" alt="Retour Bruxelles" class="w-full h-56 object-cover">
+                        <div class="image-gallery w-full h-56 object-cover cursor-pointer relative"
+                             data-images='["Photos/SFAirport.jpeg", "Photos/VolRetour.jpeg"]'
+                             data-current-index="0">
+                            <img src="Photos/SFAirport.jpeg" alt="Retour Bruxelles" class="current-image w-full h-full object-cover transition-opacity duration-300">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 text-white text-lg font-semibold pointer-events-none">
+                                Cliquez pour voir la suite
+                            </div>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-3 text-teal-900">Jour 22 : Le Grand Retour</h3>
                             <p class="text-gray-700">Départ de l'aéroport de <strong class="site-name">San Francisco</strong> (<strong class="site-name">SFO</strong>) pour le vol de retour vers <strong class="site-name">Bruxelles</strong>. La tête pleine de souvenirs de canyons ocres, de lumières de <strong class="site-name">Vegas</strong>, de séquoias géants et de la liberté des 'open roads' américaines.</p>
@@ -233,7 +343,7 @@ Loïck Peyron</p>
 
         </main>
 
-        <!-- Conclusion --><footer class="mt-16 pt-12 border-t border-teal-200">
+        <footer class="mt-16 pt-12 border-t border-teal-200">
             <h3 class="text-center text-4xl font-bold text-teal-800 mb-6">Une Aventure Grandiose</h3>
             <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto">
                 Ce road trip aura été une symphonie de paysages. Des villes vibrantes aux silences assourdissants du désert, des forêts denses aux falaises vertigineuses, c'est l'incarnation de l'aventure et du contraste. Chaque étape fût une nouvelle découverte, un émerveillement constant.
@@ -273,7 +383,7 @@ Loïck Peyron</p>
                 });
             }
 
-            // Ajouter les écouteurs d'événements
+            // Ajouter les écouteurs d'événements pour la navigation
             navButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const targetId = button.getAttribute('data-target');
@@ -283,6 +393,33 @@ Loïck Peyron</p>
 
             // Afficher la première phase par défaut
             showPhase('phase-1');
+
+            // --- NOUVELLE LOGIQUE POUR LE CHANGEMENT DE PHOTO AU CLIC (Galerie) ---
+            const imageGalleries = document.querySelectorAll('.image-gallery');
+
+            imageGalleries.forEach(gallery => {
+                gallery.addEventListener('click', () => {
+                    // 1. Récupérer la liste des images et l'index actuel
+                    const imageList = JSON.parse(gallery.getAttribute('data-images'));
+                    let currentIndex = parseInt(gallery.getAttribute('data-current-index'), 10);
+                    
+                    // 2. Calculer le nouvel index (boucle si on arrive à la fin)
+                    const nextIndex = (currentIndex + 1) % imageList.length;
+                    
+                    // 3. Mettre à jour l'attribut de l'index dans le HTML
+                    gallery.setAttribute('data-current-index', nextIndex);
+                    
+                    // 4. Mettre à jour l'image affichée avec une petite transition
+                    const currentImageElement = gallery.querySelector('.current-image');
+                    currentImageElement.style.opacity = '0.7'; 
+                    
+                    setTimeout(() => {
+                        currentImageElement.src = imageList[nextIndex];
+                        currentImageElement.style.opacity = '1';
+                    }, 150); // Attendre 150ms avant de changer la source et de restaurer l'opacité
+                });
+            });
+            // ------------------------------------------------------------------
         });
     </script>
 
