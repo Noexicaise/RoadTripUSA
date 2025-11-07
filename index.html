@@ -42,7 +42,7 @@
             color: #047871; /* Un teal un peu plus foncé */
         }
 
-        /* --- NOUVEAUX STYLES PLEIN ÉCRAN POUR CORRIGER LE COMPORTEMENT MOBILE --- */
+        /* --- STYLES PLEIN ÉCRAN POUR CORRIGER LE COMPORTEMENT MOBILE --- */
         .image-gallery:fullscreen, 
         .image-gallery:-webkit-full-screen,
         .image-gallery:-moz-full-screen,
@@ -469,14 +469,19 @@ Loïck Peyron</p>
                     // Empêche l'événement de remonter et de déclencher le carrousel
                     event.stopPropagation(); 
 
-                    // Demande le mode plein écran pour le conteneur de la galerie (plus fiable sur mobile)
-                    if (gallery.requestFullscreen) {
-                        gallery.requestFullscreen();
-                    } else if (gallery.webkitRequestFullscreen) { /* Safari / iOS */
+                    // Tenter de demander le mode plein écran pour le conteneur de la galerie.
+                    // Priorité à Webkit pour Safari/Chrome iOS
+                    if (gallery.webkitRequestFullscreen) {
                         gallery.webkitRequestFullscreen();
-                    } else if (gallery.mozRequestFullScreen) { /* Firefox */
+                    } 
+                    // Tentative standard
+                    else if (gallery.requestFullscreen) {
+                        gallery.requestFullscreen();
+                    } 
+                    // Autres navigateurs
+                    else if (gallery.mozRequestFullScreen) {
                         gallery.mozRequestFullScreen();
-                    } else if (gallery.msRequestFullscreen) { /* IE11 */
+                    } else if (gallery.msRequestFullscreen) {
                         gallery.msRequestFullscreen();
                     }
                 });
