@@ -41,19 +41,29 @@
             font-weight: 600; /* Plus marqué que 'normal' */
             color: #047871; /* Un teal un peu plus foncé */
         }
-        /* Style pour l'image en mode plein écran (optionnel mais utile pour éviter le rognage) */
-        .current-image:-webkit-full-screen {
-            object-fit: contain; /* Assure que l'image n'est pas rognée en plein écran */
+
+        /* --- NOUVEAUX STYLES PLEIN ÉCRAN POUR CORRIGER LE COMPORTEMENT MOBILE --- */
+        .image-gallery:fullscreen, 
+        .image-gallery:-webkit-full-screen,
+        .image-gallery:-moz-full-screen,
+        .image-gallery:-ms-fullscreen {
+            background-color: black; /* Fond noir en plein écran */
+            width: 100%;
+            height: 100%;
+            display: flex; /* Utiliser flexbox pour centrer l'image */
+            justify-content: center;
+            align-items: center;
         }
-        .current-image:-moz-full-screen {
-            object-fit: contain;
+        
+        .image-gallery:fullscreen .current-image, 
+        .image-gallery:-webkit-full-screen .current-image,
+        .image-gallery:-moz-full-screen .current-image,
+        .image-gallery:-ms-fullscreen .current-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* L'image s'affiche entièrement sans être rognée */
         }
-        .current-image:-ms-fullscreen {
-            object-fit: contain;
-        }
-        .current-image:fullscreen {
-            object-fit: contain;
-        }
+        /* -------------------------------------------------------------------------- */
     </style>
 </head>
 <body class="text-gray-800">
@@ -459,13 +469,15 @@ Loïck Peyron</p>
                     // Empêche l'événement de remonter et de déclencher le carrousel
                     event.stopPropagation(); 
 
-                    // Demande le mode plein écran pour l'élément image
-                    if (currentImageElement.requestFullscreen) {
-                        currentImageElement.requestFullscreen();
-                    } else if (currentImageElement.webkitRequestFullscreen) { /* Safari */
-                        currentImageElement.webkitRequestFullscreen();
-                    } else if (currentImageElement.msRequestFullscreen) { /* IE11 */
-                        currentImageElement.msRequestFullscreen();
+                    // Demande le mode plein écran pour le conteneur de la galerie (plus fiable sur mobile)
+                    if (gallery.requestFullscreen) {
+                        gallery.requestFullscreen();
+                    } else if (gallery.webkitRequestFullscreen) { /* Safari / iOS */
+                        gallery.webkitRequestFullscreen();
+                    } else if (gallery.mozRequestFullScreen) { /* Firefox */
+                        gallery.mozRequestFullScreen();
+                    } else if (gallery.msRequestFullscreen) { /* IE11 */
+                        gallery.msRequestFullscreen();
                     }
                 });
             });
